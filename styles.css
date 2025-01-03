@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent, rgba(0,0,0,0.4));
+}
+
+.content-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 36rem;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.time-container {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 200ms;
+}
+
+#time {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+    letter-spacing: -0.025em;
+}
+
+#date {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+}
+
+.quote-container {
+    text-align: center;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 600ms;
+    cursor: pointer;
+}
+
+#quote {
+    font-size: 1.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+    transition: all 0.5s ease;
+}
+
+#author {
+    font-size: 1.125rem;
+    opacity: 0.6;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+}
+
+.settings-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.settings-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.settings-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.pomodoro-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .pomodoro-mode {
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.25rem;
+ }
+ 
+ .pomodoro-time {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.5rem;
+ }
+ 
+ .pomodoro-controls {
+    display: flex;
+    gap: 0.5rem;
+ }
+ 
+ .pomodoro-controls button {
+    flex: 1;
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    border-radius: 0.375rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+ }
+ .tasks-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 36rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#taskTime {
+    width: 8rem;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: all 0.2s;
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.finish-button, .timer-button, .delete-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.finish-button:hover, .timer-button:hover, .delete-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.task-text {
+    flex: 1;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.task-time {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.completed {
+    opacity: 0.5;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+}
+
+#addItem {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#addItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    padding: 40px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-engine {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    
+}
+
+.search-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.shortcuts-sidebar {
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80vh;
+    width: 60px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: width 0.3s;
+}
+
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.shortcut-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.shortcut-title {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.shortcuts-sidebar:hover .shortcut-title {
+    opacity: 1;
+}

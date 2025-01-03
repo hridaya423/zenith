@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extension Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings-card">
+            <h1>Settings</h1>
+            <div class="settings-group">
+                <label for="apiKey">Unsplash API Key</label>
+                <input 
+                    type="password" 
+                    id="apiKey" 
+                    placeholder="Enter your API key"
+                >
+            </div>
+            <div class="settings-group">
+                <label for="blurLevel">Background Blur</label>
+                <input 
+                    type="range" 
+                    id="blurLevel" 
+                    min="0" 
+                    max="20"
+                >
+            </div>
+            <div class="settings-group">
+                <label for="quoteFontSize">Quote Size</label>
+                <input 
+                    type="range" 
+                    id="quoteFontSize" 
+                    min="16" 
+                    max="32"
+                >
+            </div>
+
+            <div class="settings-group">
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showTime">
+                        <span>Show Time</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showDate">
+                        <span>Show Date</span>
+                    </label>
+                </div>
+            </div>
+
+            
+
+            <button id="save">
+                Save Settings
+            </button>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

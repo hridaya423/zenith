@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Zenith",
+    "version": "1.0",
+    "description": "Transform your new tab into a serene dashboard. Blend productivity with tranquility through task management, inspirational quotes.",
+    "permissions": [
+        "storage",
+        "tabs", 
+        "downloads",
+        "notifications",
+        "activeTab",
+        "https://api.unsplash.com/*",
+        "https://api.quotable.io/*"
+    ],
+    "options_page": "options.html",
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "icons": {
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' https:;"
+    },
+    "background": {
+        "service_worker": "script.js",
+        "persistent": false
+    }
+}
