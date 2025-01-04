@@ -12,11 +12,7 @@ Transform your new tab into a serene dashboard. Blend productivity with tranquil
 
 ## Installation
 
-- Download the extension from the Chrome Web Store (coming soon).
-- Install the extension in your Chrome browser:
-1. Download this repo
-2. extract, then get it out then send to zip
-3. load unpacked
+- Download the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/zenith/glocalmkapjjbmccnmbmamaljhdljgmg?authuser=8&hl=en-GB).
 - Enjoy your new, focused new tab experience!
 
 ## Usage
